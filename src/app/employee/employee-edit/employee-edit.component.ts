@@ -32,7 +32,7 @@ export class EmployeeEditComponent implements OnInit, OnDestroy {
   private sub: Subscription;
 
   displayMessage: { [key: string]: string } = {};
-  private validationMessages: { [key: string]: { [key: string]: string } };
+  public validationMessages: { [key: string]: { [key: string]: string } };
 
   constructor(
     private fb: FormBuilder,

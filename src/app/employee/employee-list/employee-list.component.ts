@@ -41,7 +41,7 @@ export class EmployeeListComponent implements OnInit {
 
     const connection = new signalR.HubConnectionBuilder()
       .configureLogging(signalR.LogLevel.Information)
-      .withUrl(environment.baseUrl + 'notify')
+      .withUrl(environment.baseUrl + '--')
       .build();
 
     connection
