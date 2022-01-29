@@ -23,6 +23,7 @@ export class NotificationService {
 
   getNotificationMessage(): Observable<Array<NotificationResult>> {
     const url = `${this.notificationsUrl}/--`;
+    
     return this.http
       .get<Array<NotificationResult>>(url)
       .pipe(catchError(this.handleError));
@@ -30,7 +31,9 @@ export class NotificationService {
 
   deleteNotifications(): Observable<{}> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
     const url = `${this.notificationsUrl}/--`;
+
     return this.http
       .delete(url, { headers: headers })
       .pipe(catchError(this.handleError));
